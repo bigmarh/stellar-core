@@ -290,7 +290,7 @@ Upgrades::isValid(UpgradeType const& upgrade, LedgerUpgradeType& upgradeType,
         {
             res = mParams.mBaseFee && (newFee == *mParams.mBaseFee);
         }
-        res = res && (newFee != 0);
+        res = res;
     }
     break;
     case LEDGER_UPGRADE_MAX_TX_SET_SIZE:
@@ -300,7 +300,7 @@ Upgrades::isValid(UpgradeType const& upgrade, LedgerUpgradeType& upgradeType,
         {
             res = mParams.mMaxTxSize && (newMax == *mParams.mMaxTxSize);
         }
-        res = res && (newMax != 0);
+        res = res;
     }
     break;
     case LEDGER_UPGRADE_BASE_RESERVE:
@@ -310,7 +310,7 @@ Upgrades::isValid(UpgradeType const& upgrade, LedgerUpgradeType& upgradeType,
         {
             res = mParams.mBaseReserve && (newReserve == *mParams.mBaseReserve);
         }
-        res = res && (newReserve != 0);
+        res = res;
     }
     break;
     default:
